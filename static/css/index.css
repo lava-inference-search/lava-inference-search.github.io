@@ -1,5 +1,5 @@
 /* Modern CSS Variables for consistent theming */
-:root {
+/* :root {
   --primary-color: #2563eb;
   --primary-hover: #1d4ed8;
   --secondary-color: #64748b;
@@ -21,7 +21,43 @@
   --border-radius: 12px;
   --border-radius-lg: 16px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+:root {
+  --primary-color: #c2410c;
+  --primary-hover: #9a3412;
+  --secondary-color: #78716c;
+  --accent-color: #ea580c;
+  --text-primary: #292524;
+  --text-secondary: #78716c;
+  --text-light: #a8a29e;
+  --background-primary: #ffffff;
+
+  
+  --background-secondary: #fbf8f6;
+
+
+  --background-accent: #f7f1ec;
+
+  --border-color: #ead9cf;
+
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --gradient-primary: linear-gradient(135deg, #f97316 0%, #b91c1c 100%);
+  --gradient-accent: linear-gradient(135deg, #fb923c 0%, #dc2626 100%);
+  --gradient-subtle: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+    /* was #ffffff  — the page itself */
+ /* was #fbf8f6  — abstract band + footer */
+    /* was #f7f1ec  — BibTeX block */
+         /* was #ead9cf  — deepened to stay visible */
 
 /* Smooth scrolling for better UX */
 html {

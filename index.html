@@ -3,68 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="LaVA: Decoding-Free Latent Verification for Efficient Text-to-Audio Inference-Time Scaling">
+  <meta name="description" content="LaVA scores text-to-audio candidates directly from noisy latents of a frozen TangoFlux, removing waveform decoding from inference-time search for up to 10.7x speedup.">
+  <meta name="keywords" content="Text-to-Audio Generation, Inference-Time Scaling, Latent Verifier, Flow Matching, Diffusion Modeling, TangoFlux, CLAP, Representation Alignment">
+  <meta name="author" content="Christos Sgouropoulos, Ioannis Kakogeorgiou, Georgios Petsangourakis, Dionisios Sotiropoulos, Theodoros Giannakopoulos">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:title" content="LaVA: Decoding-Free Latent Verification for Efficient Text-to-Audio Inference-Time Scaling">
+  <meta property="og:description" content="LaVA search step. Unlike standard pipelines that decode all N candidates for external scoring, LaVA predicts CLAP rewards directly from a partial forward pass at layer 6 of a frozen TangoFlux.
+  By advancing only the winning latent to the remaining layers, it avoids expensive full-trajectory evaluations and waveform decoding, giving up to 10.7x lower wall-clock time and 17.5x fewer FLOPs at matched fidelity.">
+  <meta property="og:url" content="https://lava-inference-search.github.io/">
+  <meta property="og:image:alt" content="LaVA: Decoding-Free Latent Verification for Efficient Text-to-Audio Inference-Time Scaling">
+  <meta property="article:published_time" content="2026-09-16T00:00:00.000Z">
+  <meta property="article:author" content="Christos Sgouropoulos">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="LaVA">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <!-- TODO: Replace with your lab/institution Twitter handle -->
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
   <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:creator" content="@YOUR_TWITTER_HANDLE">
+  <meta name="twitter:title" content="LaVA: Decoding-Free Latent Verification for Efficient Text-to-Audio Inference-Time Scaling">
+  <meta name="twitter:description" content="A lightweight head on a frozen TangoFlux predicts CLAP rewards straight from noisy latents, so inference-time search never has to decode. Up to 10.7x faster at matched fidelity.">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta name="twitter:image" content="https://lava-inference-search.github.io/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="LaVA">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_title" content="LaVA: Decoding-Free Latent Verification for Efficient Text-to-Audio Inference-Time Scaling">
+  <meta name="citation_author" content="Sgouropoulos, Christos">
+  <meta name="citation_author" content="Kakogeorgiou, Ioannis">
+  <meta name="citation_author" content="Petsangourakis, Georgios">
+  <meta name="citation_author" content="Sotiropoulos, Dionisios">
+  <meta name="citation_author" content="Giannakopoulos, Theodoros">
+  <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <!-- TODO: point at your arXiv PDF once posted -->
+  <meta name="citation_pdf_url" content="https://lava-inference-search.github.io/static/pdfs/lava.pdf">
+
   <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="theme-color" content="#c2410c">
+  <meta name="msapplication-TileColor" content="#c2410c">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,23 +62,22 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
+  <title>LaVA</title>
+
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -97,10 +85,10 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -108,72 +96,71 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "LaVA",
+    "description": "A latent-space verifier for efficient inference-time scaling in text-to-audio generation.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
+        "name": "Christos Sgouropoulos",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "IIT, National Centre for Scientific Research Demokritos"
         }
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
+        "name": "Ioannis Kakogeorgiou",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "IIT, National Centre for Scientific Research Demokritos"
         }
       }
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2026-09-16",
     "publisher": {
       "@type": "Organization",
       "name": "CONFERENCE_OR_JOURNAL_NAME"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "url": "https://lava-inference-search.github.io/",
+    "image": "https://lava-inference-search.github.io/static/images/social_preview.png",
+    "keywords": ["text-to-audio", "inference-time scaling", "latent verifier", "flow matching", "TangoFlux", "CLAP"],
     "abstract": "FULL_ABSTRACT_TEXT_HERE",
     "citation": "BIBTEX_CITATION_HERE",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      "@id": "https://lava-inference-search.github.io/"
     },
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Text-to-audio generation"
       },
       {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "@type": "Thing",
+        "name": "Inference-time scaling"
       }
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "name": "IIT, National Centre for Scientific Research Demokritos",
+    "url": "https://www.iit.demokritos.gr/",
+    "logo": "https://lava-inference-search.github.io/static/images/favicon.ico",
     "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/ChristosSgouropoulos/LaVA"
     ]
   }
   </script>
@@ -186,53 +173,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
   <section class="hero">
@@ -240,31 +180,37 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">LaVA: Decoding-Free Latent Verification for Efficient Text-to-Audio Inference-Time Scaling</h1>
+                <!-- TODO: change to the venue once the paper is accepted -->
+		        <p class="subtitle is-2" style="margin-top: 0.5rem; color: #c2410c; font-family: 'Inter', sans-serif; font-weight: 700;">
+		          Under Review
+		        </p>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=Cw7CeiAAAAAJ&hl=en" target="_blank">Christos Sgouropoulos</a><sup>1,2</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?user=B_dKcz4AAAAJ&hl=en" target="_blank">Ioannis Kakogeorgiou</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                    <a href="https://scholar.google.com/citations?user=0PI25YQAAAAJ&hl=en" target="_blank">Georgios Petsangourakis</a><sup>1,3</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=cIdrKT0AAAAJ&hl=en&oi=ao" target="_blank">Dionisios Sotiropoulos</a><sup>1,3</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=BeIoqhwAAAAJ&hl=en" target="_blank">Theodoros Giannakopoulos</a><sup>1</sup></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">
+                      <sup>1</sup>IIT, National Centre for Scientific Research "Demokritos"<br>
+                      <sup>2</sup>University of Piraeus<br>
+                      <sup>3</sup>University of West Attica
+                    </span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
+                         <!-- TODO: put the paper PDF at static/pdfs/lava.pdf, or swap for the arXiv link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static/pdfs/lava.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -273,20 +219,9 @@
                       </a>
                     </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/ChristosSgouropoulos/LaVA" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -295,9 +230,9 @@
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
+                <!-- TODO: update with your arXiv paper ID once posted, or delete this block -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/ARXIV_ID" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -314,23 +249,25 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+    <div class="hero-body has-text-centered">
+
+      <!-- TODO: image1.jpg = Figure 1 (the LaVA search step diagram) -->
+      <img src="static/images/fig1.png"
+           alt="Overview of the LaVA method"
+           style="max-width: 100%; height: auto;">
+        <h2 class="subtitle has-text-left" style="font-size: 1rem; max-width: 100%; margin: auto;">
+            <strong>Overview of <span class="texttt">LaVA</span> </strong>. Latent Verifier for Audio inference search. Standard pipelines (b) decode all N candidates to waveforms so an external verifier can score them.
+          <span class="texttt">LaVA</span> (a) runs the frozen TangoFlux transformer only up to layer &#8467; = 6 and reads its audio hidden states. A lightweight head aggregates the temporal frames with an Efficient Probing attention pool,
+          modulates them by the sampling step through a FiLM layer, and projects the result into the 512-dimensional CLAP-audio embedding space. A candidate is scored by the cosine similarity between that predicted embedding and the prompt's CLAP-text embedding.
+          Only the winning latent is advanced through the remaining layers, so neither waveform decoding nor full-trajectory evaluation is ever needed for a candidate that gets discarded.
+        </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -339,10 +276,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+           Inference-time scaling improves diffusion without retraining: search algorithms sample multiple noise particles and use a verifier during denoising to steer sampling toward high-reward outputs. Standard methods decode every candidate and score with an external verifier, making repeated evaluation the main computational bottleneck. We introduce a latent-space verifier: a lightweight head attached to an intermediate layer of the frozen generator that predicts reward embeddings directly from noisy latents, eliminating decoding and enabling efficient per-step scoring. Across Best-of-N, Particle Filtering, and Rollover Budget Forcing search on the text-to-audio model TangoFlux, our verifier achieves up to 10.7&times; speedup while matching the OpenL3-FD of decode-based CLAP rewards. Starting from the original TangoFlux baseline without inference-time scaling 72.58, our approach reduces OpenL3-FD on AudioCaps to 64.62 by reinvesting the compute saved from latent-space verification into additional particles. Our scoring head uses 4.8M parameters, 14&times; fewer than the 68.6M-parameter CLAP audio encoder.</a>.
         </div>
       </div>
     </div>
@@ -351,122 +286,328 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Decoding is the bottleneck! 🐌</h2>
+    <div class="content has-text-justified">
+      <p>
+        Inference-time scaling buys quality by searching over candidates instead of denoising longer. But scoring a candidate is expensive: it must be fully denoised, decoded into a waveform, and passed through an external reward model, and per-step methods repeat all of that at every denoising step. In audio, both existing inference-time-scaling works decode every candidate before scoring it.
+      </p>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered"> Score the latent, forward the winner, skip the decoder! ⏭️</h2>
+    <div class="content has-text-justified">
+      <p>
+        The frozen generator already carries the semantics needed to judge a candidate. Rather than decode and call an external model, we predict the reward directly from the noisy latent with a lightweight head attached to an intermediate layer.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered"> Findings 🔬</h2>
+    <div class="content has-text-justified">
+      <p>
+        Because the head regresses the CLAP-audio embedding of the clean sample, scoring its prediction against the prompt's CLAP-text embedding approximates the decode-based CLAP reward without ever producing a waveform. Verification is decoupled from denoising, so the compute that standard search pours into candidates it will discard is simply never spent. Search gets dramatically cheaper at no cost in audio fidelity.
+      </p>
+
+       <div class="has-text-centered">
+        <!-- TODO: image2.jpg = Table 1 (main inference-time scaling results) -->
+        <img src="static/images/tbl1.png"
+             alt="Main results table"
+             style="max-width: 100%; height: auto;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered"> Our Method 🧠</h2>
+    <div class="content has-text-justified">
+  <p>A 4.8M-parameter head on a frozen TangoFlux, made of three parts:</p>
+  <p>1️⃣ Efficient Probing attention pool, 32 learnable queries over the 645 temporal frames</p>
+  <p>2️⃣ AdaLN-FiLM conditioning on the sampling step, so one head scores latents at any noise level</p>
+  <p>3️⃣ Linear–GELU–Linear MLP into a 512-D ℓ2-normalized embedding</p>
+  <p>🔥 Trained on AudioCaps to match the clip's clean 512-D CLAP-audio embedding under a cosine loss.</p>
+
+
+<section class="section">
+ 
+      <h2 class="title is-3 has-text-centered">Where it plugs in 🔍</h2>
+      <div class="content has-text-justified">
+        <p>LaVA replaces the verifier, not the search algorithm, so it drops into existing methods unchanged. What it saves depends on what each method spends its compute on.</p>
+      </div>
+      <div class="container is-max-desktop">
+      <div class="box" style="background: #fdf5f0; border: 1px solid #f0dccf; box-shadow: none; padding: 2rem 2.25rem;">
+
+      <h3 class="title is-4 has-text-centered">Best-of-N Early Selection</h3>
+      <div class="content has-text-justified">
+        <p>With N = 16, candidates no longer need to be finished before they can be judged. We denoise them to just 30% of the trajectory, rank them in latent space, and let only the winner run to completion and reach the decoder. Fidelity is on par with scoring fully denoised candidates (66.85 vs 66.65 OpenL3-FD) at 3.0&times; lower wall-clock and 3.1&times; fewer FLOPs.</p>
+      </div>
+
+      <h3 class="title is-4 has-text-centered">Decode-Free Particle Filtering</h3>
+      <div class="content has-text-justified">
+        <p>Particle filtering keeps N = 40 particles denoising in parallel, scoring them every 5 steps after a warmup and resampling toward high-reward trajectories. Every particle advances at every step whether or not it scores well, so there is no forward pass to save here; what LaVA removes is the decoding. That alone is worth 1.7&times;, at a slightly better FD than the decode-based verifier (66.00 vs 66.22).</p>
+      </div>
+
+      <h3 class="title is-4 has-text-centered">Super-Efficient Rollover Budget Forcing</h3>
+      <div class="content has-text-justified" style="margin-bottom: 0;">
+        <p>This is where the design pays off. RBF proposes up to B = 9 stochastic next states per particle at every denoising step, and scoring each one the standard way costs a full model forward just to obtain its Tweedie estimate, then a decode. LaVA scores every proposal from a single partial forward and defers the expensive full computation to the one particle that gets accepted, giving 10.7&times; lower wall-clock and 17.5&times; fewer FLOPs at matched fidelity. Cheap enough that the freed compute buys wider populations: N = 20 and N = 30 reach 64.82 and 64.62, below anything decode-based search reaches at any budget we could run.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Listen 🔊</h2>
+    <div class="content has-text-justified">
+    </div>
+
+    <div style="max-height: 30rem; overflow-y: auto; overscroll-behavior: contain;
+            border: 1px solid #ead9cf; border-radius: 6px;
+            padding: 1.25rem 1.5rem 0.25rem 1.5rem; background: #ffffff;">
+  
+
+
+      <div class="content">
+      <p><i>"A man speaks with others speaking in the distance and traffic passing with a few horns honking.</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt1_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt1_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><i>"A bell ticks with a thumping noise."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt2_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt2_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><i>"While music plays in the background, a frog croaks, young females speak and laugh, and a young male speaks."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt3_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt3_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><i>"A train running on railroad tracks followed by a lawn mower engine running then a steam engine whistle blowing as a crowd of people are talking in the background."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt4_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt4_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><i>"A low loud hum gets lower followed by an explosion."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt5_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt5_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <p><i>"A baby cries and a young child speaks."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt6_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt6_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><i>"Hog snorting with male screaming."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt7_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt7_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><i>"Women talk while food fries."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt8_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt8_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><i>"Ocean waves crashing as wind blows into a microphone."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt9_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt9_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <p><i>"A faucet pouring water as water fills a container followed by scrubbing on a plastic surface and water splashing."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt10_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt10_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <p><i>"A person is snoring steadily."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt11_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt11_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+      <div class="content">
+      <p><i>"A dog barks and rustles with some clicking."</i></p>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p><strong>Vanilla TangoFlux</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt12_vanilla.wav" type="audio/wav"></audio>
+        </div>
+        <div class="column has-text-centered">
+          <p><strong>RBF + LaVA</strong></p>
+          <audio controls preload="none" style="width: 100%;"><source src="static/audio/prompt12_lava.wav" type="audio/wav"></audio>
+        </div>
+      </div>
+    </div>
+
+
+
+      
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Deeper layers scale 📈</h2>
+    <div class="content has-text-justified">
+  <p>At N = 2 the layer choice barely matters, with &#8467; = 4, 5, 6 all around 65.1. The layers separate as search widens: at N = 30 the deeper taps keep improving to 64.80 and 64.62 while shallower ones plateau above 65.3. Deeper single-stream blocks have absorbed more text conditioning through the preceding cross-attention layers, and they are steadier too, narrowing to &plusmn;0.08 against up to &plusmn;0.49 at shallower layers.</p>
 </div>
+
+       <div class="has-text-centered">
+        <!-- TODO: image3.jpg = Figure 2 (OpenL3-FD vs particle count, per layer) -->
+        <img src="static/images/fig2.png"
+             alt="Layer ablation"
+             style="max-width: 80%; height: auto;">
+           <h2 class="subtitle has-text-left" style="font-size: 1rem; max-width: 100%; margin: auto;">
+             OpenL3-FD under RBF with increasing particle count N. Deeper layers (&#8467; = 5, 6) keep improving, whereas shallower layers (&#8467; = 3, 4) saturate. Mean &plusmn; std across 3 seeds with B = 9.
+           </h2>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Every component earns its place 🧩</h2>
+    <div class="content has-text-justified">
+  <p>Regressing the clip's own CLAP-audio embedding under a cosine loss beats retargeting to the caption's text embedding, adding an Audiobox perceptual-quality term, or swapping in a contrastive InfoNCE objective. Within the head, removing the timestep FiLM modulation costs 0.64 FD and replacing the attention pool with mean pooling costs 0.87.</p>
 </div>
-</section>
-<!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+       <div class="has-text-centered">
+        <!-- TODO: image4.jpg = Tables 2 and 3 (verifier objective, head architecture) -->
+        <img src="static/images/abl.png"
+             alt="Ablation tables"
+             style="max-width: 80%; height: auto;">
       </div>
+
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Summary 🏁</h2>
+    <div class="content has-text-justified">
+<p>LaVA shows that verification in audio inference search does not have to happen in waveform space. Predicting the CLAP-audio representation straight from intermediate noisy latents makes inference-time search cheap enough to widen, and wider search results to better audio. Since the verifier reads the latent state directly, its reward is also differentiable with respect to the generator representation, opening the door to inference-time optimization without backpropagating through a decoder.
+</p>
+</div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
@@ -480,13 +621,13 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
+      <pre id="bibtex-code"><code>
+@article{sgouropoulos2026lava,
+author={Christos Sgouropoulos and Ioannis Kakogeorgiou and Georgios Petsangourakis and Dionisios Sotiropoulos and Theodoros Giannakopoulos},
+title={LaVA: Decoding-Free Latent Verification for Efficient Text-to-Audio Inference-Time Scaling},
+year={2026}
+}
+</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -499,7 +640,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
@@ -511,7 +652,7 @@
 </footer>
 
 <!-- Statcounter tracking code -->
-  
+
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
