@@ -210,7 +210,7 @@
                     <div class="publication-links">
                          <!-- TODO: put the paper PDF at static/pdfs/lava.pdf, or swap for the arXiv link -->
                       <span class="link-block">
-                        <a href="static/pdfs/lava.pdf" target="_blank"
+                        <a href="static/pdfs/LaVA.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -230,7 +230,7 @@
                   </a>
                 </span>
 
-                <!-- TODO: update with your arXiv paper ID once posted, or delete this block -->
+                <!-- TODO: update with your arXiv paper ID once posted, or delete this block
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/ARXIV_ID" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -239,7 +239,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -288,7 +288,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Decoding is the bottleneck! 🐌</h2>
+    <h2 class="title is-3 has-text-centered">Scoring is the bottleneck! 🐌</h2>
     <div class="content has-text-justified">
       <p>
         Inference-time scaling buys quality by searching over candidates instead of denoising longer. But scoring a candidate is expensive: it must be fully denoised, decoded into a waveform, and passed through an external reward model, and per-step methods repeat all of that at every denoising step. In audio, both existing inference-time-scaling works decode every candidate before scoring it.
